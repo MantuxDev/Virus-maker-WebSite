@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title>Virus Maker - Generatore di virus</title>
+        <link rel="icon" href="img/logo.ico" sizes="32x32" />
+        
+        <link rel="stylesheet" href="css/style.css" />
+        <meta name="description" content="Generatore di virus informatici" />
+        <meta name="author" content="mantux" />
+    
+    </head>
+    <body>
+        <header>
+            <nav class="navbar" id="navbar">
+                <div class="navbar-inner">
+                    <div class="left-section">
+
+                        <div class="logo">
+                            <img src="img/logo.png" alt="Logo" />
+                        </div>
+
+                        <div class="name">Virus maker</div>
+
+                        <div class="nav-links">
+                            <div class="nav-link">Download</div>
+                            <div class="nav-link">Funzioni</div>
+                            <div class="nav-link">Contatti</div>
+                        </div>
+
+                    </div>
+
+                    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="nav-link" onclick="closeMenu()">Download</div>
+                    <div class="nav-link" onclick="closeMenu()">Funzioni</div>
+                    <div class="nav-link" onclick="closeMenu()">Contatti</div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="main">
+            
+            <div>
+                <h1>Crea, distruggi, ripeti.</h1>
+                <h2>L'arte del malware, alla portata di chi osa.</h2>
+                <a href="#">Scarica per Windows</a>
+
+            </div>
+
+            <img src="img/img1.png" alt="">
+
+        </section>
+
+        <script>
+            function toggleMenu() {
+                const menu=document.getElementById('mobileMenu');
+                const hamburger=document.getElementById('hamburger');
+                menu.classList.toggle('show');
+                hamburger.classList.toggle('active');
+            } 
+
+            function closeMenu() {
+                document.getElementById('mobileMenu').classList.remove('show');
+                document.getElementById('hamburger').classList.remove('active');
+            } 
+
+            window.addEventListener('scroll', ()=>{
+                const navbar=document.getElementById('navbar');
+                if (window.scrollY>50) {
+                navbar.classList.add('scrolled');
+                }else{
+                navbar.classList.remove('scrolled');
+                }
+            });
+
+        </script>
+    </body>
+</html>
