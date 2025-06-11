@@ -36,7 +36,7 @@ body {
     transition: all 0.5s;
     padding-top: 10px;
     padding-bottom: 10px;
-    
+    border-bottom: 1px solid black;
 }
 
 .navbar-inner {
@@ -158,8 +158,11 @@ body {
 
 section{
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+}
+
+.container{
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 /*Main*/
@@ -175,9 +178,9 @@ section{
 }
 
 .main h2{
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px;
-    color: #bcbcbc;
+    color: #ffffff;
 }
 
 .main a{
@@ -197,16 +200,24 @@ section{
     background-color: #f5011e;
 }
 
-.main img{
+.image{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image img{
     margin-top: 50px;
+    width: 80%;
 }
 
 
 @media (max-width: 768px) {
 
-    .navbar{
-        margin-left: 0px;
+    .logo {
+        margin-left: 0%;
     }
+
     .navbar-inner {
         padding-left: 20px;
         padding-right: 20px;
